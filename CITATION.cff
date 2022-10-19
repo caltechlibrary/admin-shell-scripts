@@ -10,7 +10,7 @@ authors:
     orcid: "https://orcid.org/0000-0003-0900-6903"
 
 repository-code: "git+https://github.com/caltechlibrary/admin-shell-scripts"
-version: 0.0.1
+version: 0.0.3
 license-url: "https://spdx.org/licenses/BSD-3-Clause-Clear"
 
 date-released: 2022-10-19

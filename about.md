@@ -11,7 +11,7 @@ authors:
     orcid: "https://orcid.org/0000-0003-0900-6903"
 
 repository-code: "git+https://github.com/caltechlibrary/admin-shell-scripts"
-version: 0.0.1
+version: 0.0.3
 license-url: "https://spdx.org/licenses/BSD-3-Clause-Clear"
 
 date-released: 2022-10-19
@@ -20,7 +20,7 @@ date-released: 2022-10-19
 About this software
 ===================
 
-## admin-shell-scripts 0.0.1
+## admin-shell-scripts 0.0.3
 
 ### Authors
 
@@ -51,3 +51,4 @@ Ubuntu Servers and support our data infrastructure.
 - pandoc
 - mysql
 - makepasswd
+- jq
