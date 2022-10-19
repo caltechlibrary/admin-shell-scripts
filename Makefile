@@ -49,10 +49,10 @@ clean: .FORCE
 
 install: build
 	for FNAME in $(BASH_SCRIPTS); do cp -v $$FNAME $(PREFIX)/bin/; done
-	for FNAME in $(MAN_PAGES); do cp -vp $$FNAME $(PREFIX)/; done
+	for FNAME in $(MAN_PAGES); do cp -vp $$FNAME $(PREFIX)/man/man1/; done
 
 uninstall: .FORCE
 	for FNAME in $(BASH_SCRIPTS); do if [ -f "$(PREFIX)/bin/$$FNAME" ]; then rm -v "$(PREFIX)/bin/$$FNAME"; fi; done
-	for FNAME in $(MAN_PAGES); do if [ -f "$(PREFIX)/$$FNAME" ]; then rm -v "$(PREFIX)/$$FNAME"; fi; done
+	for FNAME in $(MAN_PAGES); do if [ -f "$(PREFIX)/man/man1/$$FNAME" ]; then rm -v "$(PREFIX)/$$FNAME"; fi; done
 
 .FORCE:
