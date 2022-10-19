@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Caltech Library's Digital Library Development Sandbox</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+<header>
+<a href="http://library.caltech.edu"><img src="/assets/liblogo.gif" alt="Caltech Library logo"></a>
+</header>
+<nav>
+<ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="index.html">README</a></li>
+    <li><a href="LICENSE">LICENSE</a></li>
+    <li><a href="user-manual.html">User Manual</a></li>
+    <li><a href="about.html">About</li></a>
+    <li><a href="https://github.com/caltechlibrary/admin-shell-scripts">GitHub</a></li>
+<ul>
+</nav>
+
+<section>
+<h1 id="name">NAME</h1>
+<p>generate-admin-account.bash</p>
+<h1 id="synopsis">SYNOPSIS</h1>
+<p>generate-admin-account.bash USERNAME [GITHUB_USERNAME]</p>
+<h1 id="description">DESCRIPTION</h1>
+<p>generate-admin-account.bash sets up an admin user account per DLD
+group practice for Ubuntu GNU/Linux machines. In addition to adding the
+user it adds the groups we use to admin a machine, creates a README.1st
+file in the home directory with instructions to change the password and
+pulls ssh public keys from GitHub for the user we’re creating.</p>
+<p>The script should be run using sudo.</p>
+<h1 id="example">EXAMPLE</h1>
+<pre><code>sudo generate-admin-account.bash jane.doe</code></pre>
+<p>This would create an admin account for jane.doe.</p>
+<pre><code>sudo generate-admin-account.bash jane.doe jdeo</code></pre>
+<p>This could create an account for jane.doe with the GitHub username of
+jdoe.</p>
+</section>
+
+<footer>
+<span><h1><A href="http://caltech.edu">Caltech</a></h1></span>
+<span>&copy; 2021 <a href="https://www.library.caltech.edu/copyright">Caltech library</a></span>
+<address>1200 E California Blvd, Mail Code 1-32, Pasadena, CA 91125-3200</address>
+<span>Phone: <a href="tel:+1-626-395-3405">(626)395-3405</a></span>
+<span><a href="mailto:library@caltech.edu">Email Us</a></span>
+<a class="cl-hide" href="sitemap.xml">Site Map</a>
+</footer>
+</body>
+</html>

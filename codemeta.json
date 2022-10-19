@@ -1,0 +1,47 @@
+{
+    "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+    "@type": "SoftwareSourceCode",
+    "license": "https://spdx.org/licenses/BSD-3-Clause-Clear",
+    "codeRepository": "git+https://github.com/caltechlibrary/admin-shell-scripts",
+    "dateCreated": "2022-10-19",
+    "datePublished": "2022-10-19",
+    "dateModified": "2022-10-19",
+    "downloadUrl": "https://github.com/caltechlibrary/releases",
+    "issueTracker": "https://github.com/caltechlibrary/admin-shell-scripts/issues",
+    "name": "admin-shell-scripts",
+    "version": "0.0.1",
+    "description": "This is a collection of Bash scripts used by Caltech Library to manage Ubuntu Servers and support our data infrastructure.",
+    "applicationCategory": "system administration",
+    "releaseNotes": "This package assume various Unix commands and programs in various scripts. E.g. The MySQL 8 script(s) assume the mysql client is available. Building the documentation for the shell scripts requires Pandoc.",
+    "funder": {
+        "@type": "Organization",
+        "name": "Caltech Library"
+    },
+    "programmingLanguage": [
+        "Bash",
+        "Make"
+    ],
+    "operatingSystem": [
+        "Linux"
+    ],
+    "softwareRequirements": [
+        "bash",
+        "make",
+        "pandoc",
+        "mysql",
+        "makepasswd"
+    ],
+    "author": [
+        {
+            "@type": "Person",
+            "@id": "https://orcid.org/0000-0003-0900-6903",
+            "givenName": "Robert",
+            "familyName": "Doiel",
+            "email": "rsdoiel@caltech.edu",
+            "affiliation": {
+                "@type": "Organization",
+                "name": "Caltech Library"
+            }
+        }
+    ]
+}

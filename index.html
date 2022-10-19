@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Caltech Library's Digital Library Development Sandbox</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+<header>
+<a href="http://library.caltech.edu"><img src="/assets/liblogo.gif" alt="Caltech Library logo"></a>
+</header>
+<nav>
+<ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="index.html">README</a></li>
+    <li><a href="LICENSE">LICENSE</a></li>
+    <li><a href="user-manual.html">User Manual</a></li>
+    <li><a href="about.html">About</li></a>
+    <li><a href="https://github.com/caltechlibrary/admin-shell-scripts">GitHub</a></li>
+<ul>
+</nav>
+
+<section>
+<h1 id="admin-shell-scripts">Admin Shell Scripts</h1>
+<p>The repository has a collection of administrative shell scripts for
+managing Ubuntu Servers and their systems.</p>
+<h2 id="documentation">Documentation</h2>
+<p>Each script includes supports for “-h” and “–help”. The output of the
+help option is suitable to process with Pandoc into a manual page.</p>
+<pre><code>    mkdir -p man/man1
+    check-for-reboot.bash -h |\
+    pandoc --from markdown --to man -s \
+    &gt;man/man1/check-for-reboot.1</code></pre>
+<p>Check the man page or <a href="user-manual.html">user manual</a> for
+documentation on individual scripts.</p>
+<h2 id="requirements">Requirements</h2>
+<p>Aside from the standard Unix/POSIX system utilities the following
+commands are needed by one or more shell scripts.</p>
+<ul>
+<li>bash</li>
+<li>make</li>
+<li>pandoc</li>
+<li>makepasswd</li>
+<li>mysql</li>
+</ul>
+<h2 id="installation">Installation</h2>
+<ol type="1">
+<li>Clone this repository</li>
+<li>Make sure Pandoc is installed</li>
+<li>Run make and make install</li>
+</ol>
+<p>By default it will install scripts in <code>$HOME/bin</code> and
+manpages in <code>$HOME/man</code>. If you need to install in
+<code>/usr/local</code> run make with the prefix option.</p>
+<p>Install in your home directory</p>
+<pre><code>    git clone https://github.com/caltechlibrary/admin-shell-scripts
+    cd admin-shell-scripts
+    make
+    make install</code></pre>
+<p>Install in <code>/usr/local</code></p>
+<pre><code>    git clone https://github.com/caltechlibrary/admin-shell-scripts
+    cd admin-shell-scripts
+    make
+    make install prefix=/usr/local</code></pre>
+<p>Uninstall from your home diriectory</p>
+<pre><code>    cd admin-shell-scripts
+    make uninstall</code></pre>
+<p>Uninstall form <code>/usr/local</code></p>
+<pre><code>    cd admin-shell-scripts
+    make uninstall prefix=/usr/local</code></pre>
+</section>
+
+<footer>
+<span><h1><A href="http://caltech.edu">Caltech</a></h1></span>
+<span>&copy; 2021 <a href="https://www.library.caltech.edu/copyright">Caltech library</a></span>
+<address>1200 E California Blvd, Mail Code 1-32, Pasadena, CA 91125-3200</address>
+<span>Phone: <a href="tel:+1-626-395-3405">(626)395-3405</a></span>
+<span><a href="mailto:library@caltech.edu">Email Us</a></span>
+<a class="cl-hide" href="sitemap.xml">Site Map</a>
+</footer>
+</body>
+</html>

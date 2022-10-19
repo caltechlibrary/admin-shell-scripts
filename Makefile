@@ -2,18 +2,24 @@
 # Minimal Makefile to build documentation
 #
 
+PROJECT = admin-shell-scripts
+
+PANDOC = $(shell which pandoc)
+
 #PREFIX = /usr/local
 PREFIX = $(HOME)
 
 ifneq ($(prefix),)
-        PREFIX = $(prefix)
+		PREFIX = $(prefix)
 endif
 
 BASH_SCRIPTS = $(shell ls -1 *.bash)
 
 MAN_PAGES = $(shell for FNAME in $(BASH_SCRIPTS); do printf 'man/man1/%s.1 ' $$FNAME; done)
 
-build: man/man1 $(MAN_PAGES)
+DOCS = $(shell ls -1 *.bash | sed -E 's/.bash/.1.md/g')
+
+build: man/man1 $(MAN_PAGES) about.md CITATION.cff
 
 man/man1:
 	mkdir -p man/man1
@@ -21,8 +27,22 @@ man/man1:
 
 $(MAN_PAGES): $(BASH_SCRIPTS)
 
+$(DOCS): $(BASH_SCRIPTS)
+
+website: .FORCE
+	make -f website.mak
+
 $(BASH_SCRIPTS): .FORCE
-	bash $@ -h | pandoc --from markdown --to man -s >man/man1/$@.1
+	bash $@ -h >$(basename $@).1.md
+	bash $@ -h | $(PANDOC) --from markdown --to man -s >man/man1/$@.1
+
+about.md: codemeta.json .FORCE
+	cat codemeta.json | sed -E   's/"@context"/"at__context"/g;s/"@type"/"at __type"/g;s/"@id"/"at__id"/g' >_codemeta.json
+	if [ -f $(PANDOC) ]; then echo "" | $(PANDOC) --metadata title="About $(PROJECT)" --metadata-file=_codemeta.json --template=codemeta-md.tmpl >about.md; fi
+
+CITATION.cff: codemeta.json .FORCE
+	cat codemeta.json | sed -E   's/"@context"/"at__context"/g;s/"@type"/"at __type"/g;s/"@id"/"at__id"/g' >_codemeta.json
+	if [ -f $(PANDOC) ]; then echo "" | $(PANDOC) --metadata title="Cite $(PROJECT)" --metadata-file=_codemeta.json --template=codemeta-cff.tmpl >CITATION.cff; fi
 
 clean: .FORCE
 	rm -fR man
