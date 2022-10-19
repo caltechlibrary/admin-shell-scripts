@@ -27,6 +27,11 @@ check-for-reboot.bash
 This command will check if Ubuntu is expecting to be rebooted.
 It will display details if a reboot is needed and exit with a status of
 1 otherwise it will not return any output and exit with a status of 0.
+.PP
+This script will check for \[lq]safe_to_reboot.py\[rq] and
+\[lq]safe_to_reboot.bash\[rq] in the PATH as well as in /Sites and will
+run that script to check if a reboot requires extract steps beyond the
+usual \[lq]sudo reboot\[rq] command.
 .SH EXAMPLES
 .PP
 Here\[cq]s the typical use case

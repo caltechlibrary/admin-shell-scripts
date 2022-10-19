@@ -17,6 +17,11 @@ It will display details if a reboot is needed and exit with
 a status of 1 otherwise it will not return any output and
 exit with a status of 0.
 
+This script will check for "safe_to_reboot.py" and "safe_to_reboot.bash"
+in the PATH as well as in /Sites and will run that script to check
+if a reboot requires extract steps beyond the usual "sudo reboot"
+command.
+
 # EXAMPLES
 
 Here's the typical use case
