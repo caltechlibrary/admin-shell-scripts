@@ -22,7 +22,7 @@ being checked my return a false positive for corruption.
 The output of this script can be redirected to a file and
 then run in the MySQL client if errors are found.
 
-The script requires your "/Users/rsdoiel/.my.cnf" be setup with
+The script requires your "$HOME/.my.cnf" be setup with
 database user have the permissions to run the SHOW and CHECK
 SQL commands.
 
@@ -38,9 +38,9 @@ before running with the MySQL client.
 
     # Run the report
     check-mysql8-database-tables.bash caltechthesis >table-report.sql
-    # Review the report
+    # Review the report, make sure it has sensable results
     more table-report.sql
-    # Run the suggested REPAIR STABLE statements in
-    # the report.
+    # Run the suggested REPAIR TABLE statements in
+    # the report if needed.
     mysql caltechthesis <table-report.sql
 

@@ -34,9 +34,8 @@ abort check-mysql8-database-tables.bash the table being checked my
 return a false positive for corruption.</p>
 <p>The output of this script can be redirected to a file and then run in
 the MySQL client if errors are found.</p>
-<p>The script requires your “/Users/rsdoiel/.my.cnf” be setup with
-database user have the permissions to run the SHOW and CHECK SQL
-commands.</p>
+<p>The script requires your “$HOME/.my.cnf” be setup with database user
+have the permissions to run the SHOW and CHECK SQL commands.</p>
 <h1 id="examples">EXAMPLES</h1>
 <p>Checking the tables in “caltechthesis”</p>
 <pre><code>check-mysql8-database-tables.bash caltechthesis</code></pre>
@@ -44,10 +43,10 @@ commands.</p>
 running with the MySQL client.</p>
 <pre><code># Run the report
 check-mysql8-database-tables.bash caltechthesis &gt;table-report.sql
-# Review the report
+# Review the report, make sure it has sensable results
 more table-report.sql
-# Run the suggested REPAIR STABLE statements in
-# the report.
+# Run the suggested REPAIR TABLE statements in
+# the report if needed.
 mysql caltechthesis &lt;table-report.sql</code></pre>
 </section>
 

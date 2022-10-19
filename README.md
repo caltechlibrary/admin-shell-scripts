@@ -62,7 +62,7 @@ Install in `/usr/local`
     git clone https://github.com/caltechlibrary/admin-shell-scripts
     cd admin-shell-scripts
     make
-    make install prefix=/usr/local
+    sudo make install prefix=/usr/local
 ```
 
 Uninstall from your home diriectory
@@ -77,6 +77,6 @@ Uninstall form `/usr/local`
 
 ```
     cd admin-shell-scripts
-    make uninstall prefix=/usr/local
+    sudo make uninstall prefix=/usr/local
 ```
 
