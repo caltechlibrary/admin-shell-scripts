@@ -9,7 +9,7 @@
     "downloadUrl": "https://github.com/caltechlibrary/releases",
     "issueTracker": "https://github.com/caltechlibrary/admin-shell-scripts/issues",
     "name": "admin-shell-scripts",
-    "version": "0.0.1",
+    "version": "0.0.3",
     "description": "This is a collection of Bash scripts used by Caltech Library to manage Ubuntu Servers and support our data infrastructure.",
     "applicationCategory": "system administration",
     "releaseNotes": "This package assume various Unix commands and programs in various scripts. E.g. The MySQL 8 script(s) assume the mysql client is available. Building the documentation for the shell scripts requires Pandoc.",
@@ -29,7 +29,8 @@
         "make",
         "pandoc",
         "mysql",
-        "makepasswd"
+        "makepasswd",
+        "jq"
     ],
     "author": [
         {
