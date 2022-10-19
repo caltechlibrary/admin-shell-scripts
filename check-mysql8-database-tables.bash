@@ -43,10 +43,10 @@ before running with the MySQL client.
 
     # Run the report
     ${APP_NAME} caltechthesis >table-report.sql
-    # Review the report
+    # Review the report, make sure it has sensable results
     more table-report.sql
-    # Run the suggested REPAIR STABLE statements in
-    # the report.
+    # Run the suggested REPAIR TABLE statements in
+    # the report if needed.
     mysql caltechthesis <table-report.sql
 
 EOT
