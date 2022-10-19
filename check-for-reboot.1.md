@@ -13,6 +13,9 @@ check-for-reboot.bash
 # DESCRIPTION
 
 This command will check if Ubuntu is expecting to be rebooted.
+It will display details if a reboot is needed and exit with
+a status of 1 otherwise it will not return any output and
+exit with a status of 0.
 
 # EXAMPLES
 

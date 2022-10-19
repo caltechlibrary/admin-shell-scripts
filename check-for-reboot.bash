@@ -18,6 +18,9 @@ ${APP_NAME}
 # DESCRIPTION
 
 This command will check if Ubuntu is expecting to be rebooted.
+It will display details if a reboot is needed and exit with
+a status of 1 otherwise it will not return any output and
+exit with a status of 0.
 
 # EXAMPLES
 
@@ -51,7 +54,7 @@ function safe_to_reboot() {
 # Main processing
 #
 case "$1" in
-    -h|-help|--help)
+-h | -help | --help)
     usage
     exit 0
     ;;
@@ -63,7 +66,10 @@ if [ "$OS" != "Linux" ]; then
 fi
 
 if [ -e /var/run/reboot-required ]; then
-   echo "Reboot required"
-   cat /var/run/reboot-required.pkgs
-   safe_to_reboot
+    echo "Reboot required"
+    cat /var/run/reboot-required.pkgs
+    safe_to_reboot
+    exit 1
+else
+    exit 0
 fi
