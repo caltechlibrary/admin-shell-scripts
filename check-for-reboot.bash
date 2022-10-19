@@ -50,7 +50,7 @@ function safe_to_reboot() {
             python3 $(CHECK_SCRIPT)
         done
         for CHECK_SCRIPT in $(find /Sites -name safe_to_reboot.bash); do
-            python3 $(CHECK_SCRIPT)
+            bash $(CHECK_SCRIPT)
         done
     fi
 }
