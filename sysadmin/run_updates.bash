@@ -27,9 +27,9 @@ It then runs "sudo snap refresh" before calling
 
 # EXAMPLE
 
-~~
+~~~
   ${APP_NAME} apps.library.caltech.edu
-~~
+~~~
 
 MSG
 	exit 0

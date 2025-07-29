@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Caltech Library's Digital Library Development Sandbox</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://caltechlibrary.github.io/css/site.css">
+	<script type="module" src="https://caltechlibrary.github.io/CL-web-components/src/footer-global.js"></script>
+</head>
+<body>
+<header>
+<a href="http://library.caltech.edu"><img src="/assets/liblogo.gif" alt="Caltech Library logo"></a>
+</header>
+<nav>
+<ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="index.html">README</a></li>
+    <li><a href="LICENSE">LICENSE</a></li>
+    <!-- <li><a href="user-manual.html">User Manual</a></li> -->
+    <li><a href="about.html">About</li></a>
+    <li><a href="https://github.com/caltechlibrary/admin-shell-scripts">GitHub</a></li>
+<ul>
+</nav>
+
+<section>
+<h1 id="name">NAME</h1>
+<p>run_updates.bash</p>
+<h1 id="synopsis">SYNOPSIS</h1>
+<p>run_updates.bash HOST_NAME</p>
+<h1 id="description">DESCRIPTION</h1>
+<p>This script runs the following “apt” actions</p>
+<ul>
+<li>update</li>
+<li>dist-upgrade</li>
+<li>autoremove</li>
+<li>autoclean</li>
+</ul>
+<p>It then runs “sudo snap refresh” before calling
+“check-for-reboot.bash” on a remote system..</p>
+<h1 id="example">EXAMPLE</h1>
+<pre><code>  run_updates.bash apps.library.caltech.edu</code></pre>
+</section>
+
+<footer-global></footer-global>
+</body>
+</html>

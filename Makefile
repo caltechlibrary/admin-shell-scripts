@@ -32,6 +32,9 @@ $(DOCS): $(BASH_SCRIPTS)
 website: .FORCE
 	make -f website.mak
 
+publish: website .FORCE
+	./publish.bash
+
 $(BASH_SCRIPTS): .FORCE
 	bash $@ -h >$(basename $@).1.md
 	bash $@ -h | $(PANDOC) --from markdown --to man -s >man/man1/$@.1

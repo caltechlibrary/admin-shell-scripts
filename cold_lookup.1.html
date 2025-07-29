@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Caltech Library's Digital Library Development Sandbox</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://caltechlibrary.github.io/css/site.css">
+	<script type="module" src="https://caltechlibrary.github.io/CL-web-components/src/footer-global.js"></script>
+</head>
+<body>
+<header>
+<a href="http://library.caltech.edu"><img src="/assets/liblogo.gif" alt="Caltech Library logo"></a>
+</header>
+<nav>
+<ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="index.html">README</a></li>
+    <li><a href="LICENSE">LICENSE</a></li>
+    <!-- <li><a href="user-manual.html">User Manual</a></li> -->
+    <li><a href="about.html">About</li></a>
+    <li><a href="https://github.com/caltechlibrary/admin-shell-scripts">GitHub</a></li>
+<ul>
+</nav>
+
+<section>
+<h1 id="name">NAME</h1>
+<p>cold_lookup.bash</p>
+<h1 id="synopsis">SYNOPSIS</h1>
+<p>cold_lookup.bash C_NAME KEY</p>
+<h1 id="description">DESCRIPTION</h1>
+<p>cold_lookup.bash will look up the KEY record in the C_NAME (dataset
+collection) using the COLD API. This provides you with a quick way to
+see the record that will show up for a person in the COLD web
+application.</p>
+<p>It performs a curl call. # OPTION</p>
+<p>-h, –help, help | display this help message</p>
+<h1 id="example">EXAMPLE</h1>
+<pre><code>./cold_lookup.bash people.ds Minchew-B-M</code></pre>
+</section>
+
+<footer-global></footer-global>
+</body>
+</html>
