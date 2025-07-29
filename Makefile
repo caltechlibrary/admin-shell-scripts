@@ -13,7 +13,7 @@ ifneq ($(prefix),)
 		PREFIX = $(prefix)
 endif
 
-BASH_SCRIPTS = $(shell ls -1 *.bash)
+BASH_SCRIPTS = $(shell ls -1 *.bash sysadmin/*.bash cold/*.bash)
 
 MAN_PAGES = $(shell for FNAME in $(BASH_SCRIPTS); do printf 'man/man1/%s.1 ' $$FNAME; done)
 
